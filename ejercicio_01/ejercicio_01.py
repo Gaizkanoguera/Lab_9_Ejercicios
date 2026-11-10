@@ -27,24 +27,34 @@ Restricciones
 
 
 def potencia(base, exponente):
-    pass
+    if exponente == 0:
+        return 1
+    return base * potencia (base, exponente - 1)
+
+print(potencia(3, 3))    # 27
+
+pass
 
 
 # ---------------------------------------------------------------------
 # Preguntas de análisis (responde debajo de cada pregunta)
 # ---------------------------------------------------------------------
 # 1. ¿Cuál es el caso base?
-#
-#
+# if exponente == 0
+#    return 1 
 # 2. ¿Qué argumento cambia en cada llamada?
-#
+#  potencia(base, exponente)
 #
 # 3. ¿Qué operación queda pendiente mientras se resuelve la llamada recursiva?
-#
+# base * potencia
 #
 # 4. Escribe las llamadas y los retornos de potencia(3, 3).
-#
-#
+# Exponente == 0 , no
+#  base 3 * exponente 3
+#   return 27
+#    base 3 * exponente 2
+#      base 3 * exponente 1
+#        base 3 * exponente 0
 
 if __name__ == "__main__":
     print(potencia(2, 4))    # 16
